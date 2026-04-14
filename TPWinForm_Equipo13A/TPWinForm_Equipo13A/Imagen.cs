@@ -8,10 +8,8 @@ namespace TPWinForm_Equipo13A
 {
     internal class Imagen
     {
-        /*
-         -Id
-        -Url
-        -iDArticulo
-         */
+        public int Id { get; set; }
+        public string URL { get; set; }
+        public int IdArticulo { get; set; }
     }
 }

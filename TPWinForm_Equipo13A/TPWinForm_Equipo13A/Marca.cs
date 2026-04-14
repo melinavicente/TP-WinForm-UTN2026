@@ -8,11 +8,6 @@ namespace TPWinForm_Equipo13A
 {
     internal class Marca
     {
-        /*
-          - id
-          - descripcion
-        */
-
         public int Id {  get; set; }
         public string Descripcion { get; set; }
     }
