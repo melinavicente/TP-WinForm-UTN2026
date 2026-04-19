@@ -14,13 +14,15 @@ namespace TPWinForm_Equipo13A
 {
     public partial class Articulos : Form
     {
+        int indiceImagen = 0;
+
         private List<Articulo> listaArticulos;
         public Articulos()
         {
             InitializeComponent();
         }
 
-         private void Articulos_Load(object sender, EventArgs e) 
+        private void Articulos_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
@@ -49,6 +51,14 @@ namespace TPWinForm_Equipo13A
             lblItemMarca.Text = ArticuloSeleccionado.Marca.Descripcion;
             lblItemCategoria.Text = ArticuloSeleccionado.Categoria.Descripcion;
 
+            List<Imagen> listaImagenes = new List<Imagen>();
+            listaImagenes = ArticuloSeleccionado.Imagenes;
+
+
+            if (listaImagenes != null && listaImagenes.Count > 0)
+            {
+                cargarImagen(listaImagenes[0].URL);
+            }
 
         }
 
@@ -85,7 +95,48 @@ namespace TPWinForm_Equipo13A
         private void btn_modificar_Click(object sender, EventArgs e) { }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
 
-      
+        private void cargarImagen(string url)
+        {
+            try
+            {
+                pcbImagenArticulo.LoadAsync(url);
+            }
+            catch
+            {
+                pcbImagenArticulo.LoadAsync("https://capacitacion.fundacionbancopampa.com.ar/placeholder-4-png/");
+            }
+        }
 
+        private void btnImagenSiguiente_Click(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
+
+            if (articuloSeleccionado.Imagenes.Count == 0)
+                return;
+
+            indiceImagen++;
+
+            if (indiceImagen >= articuloSeleccionado.Imagenes.Count)
+                indiceImagen = 0;
+
+            cargarImagen(articuloSeleccionado.Imagenes[indiceImagen].URL);
+
+
+        }
+
+        private void btnImagenAnterior_Click(object sender, EventArgs e)
+        {
+            Articulo articuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
+
+            if (articuloSeleccionado.Imagenes.Count == 0)
+                return;
+
+            indiceImagen--;
+
+            if (indiceImagen < 0)
+                indiceImagen = articuloSeleccionado.Imagenes.Count - 1;
+
+            cargarImagen(articuloSeleccionado.Imagenes[indiceImagen].URL);
+        }
     }
 }
