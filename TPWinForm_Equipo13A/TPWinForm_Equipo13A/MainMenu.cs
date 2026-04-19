@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
+using Negocio;
 
 namespace TPWinForm_Equipo13A
 {
@@ -33,7 +35,7 @@ namespace TPWinForm_Equipo13A
 
         private void cargar()
         {
-            ProductoNegocio negocio = new ProductoNegocio();
+            ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
                 listaArticulosOriginal = negocio.listar();

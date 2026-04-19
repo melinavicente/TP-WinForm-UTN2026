@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPWinForm_Equipo13A
+namespace dominio
 {
-    internal class Categoria
+    public class Imagen
     {
-        public Categoria() { }
+        public Imagen () { }
         public int Id { get; set; }
-        public string Descripcion { get; set; }
-        
+        public string URL { get; set; }
+        public int IdArticulo { get; set; }
     }
 }

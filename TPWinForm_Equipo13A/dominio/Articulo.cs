@@ -5,9 +5,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace TPWinForm_Equipo13A
+namespace dominio
 {
-    internal class Articulo
+    public class Articulo
     {
      
         public int Id { get; set; }
