@@ -18,9 +18,10 @@ namespace TPWinForm_Equipo13A
 			SqlDataReader lector;
 
 			try
-			{
-				conexion.ConnectionString = "server=.\\SQLEXPRESS;database=CATALOGO_P3_DB; integrated security=true";
-				comando.CommandType = System.Data.CommandType.Text;
+            { //A mi la base de datos me funciona asi =>>> Valen la puso como "server=.\\SQLEXPRESS"... Habria que preguntar a algun profe por que o que...
+			//sera por diferentes programas?? yo uso el sql manager studio.
+                conexion.ConnectionString = "server=(localdb)\\MSSQLLocalDB;database=CATALOGO_P3_DB;integrated security=true";
+                comando.CommandType = System.Data.CommandType.Text;
 				comando.CommandText = "Select Id, Codigo, Nombre, Descripcion, Precio from ARTICULOS";
 				comando.Connection = conexion;
 				conexion.Open();
