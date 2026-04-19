@@ -18,7 +18,12 @@ namespace Negocio
 
 			try
             { 
-				Datos.setearConsulta("Select Id, Codigo, Nombre, Descripcion, Precio from ARTICULOS");
+				Datos.setearConsulta(
+					"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, C.Descripcion as Categoria " +
+					"from ARTICULOS A " + 
+					"INNER JOIN MARCAS M ON M.Id = A.IdMarca " + 
+					"INNER JOIN CATEGORIAS C ON C.Id = A.IdCategoria"
+					);
 				Datos.ejecutarLectura();
 
 				while(Datos.Lector.Read())
@@ -29,6 +34,10 @@ namespace Negocio
 					aux.Codigo = (String)Datos.Lector["Codigo"];
 					aux.Descripcion = (String)Datos.Lector["Descripcion"];
 					aux.Precio = (Decimal)Datos.Lector["Precio"];
+					aux.Marca = new Marca();
+					aux.Marca.Descripcion = (string)Datos.Lector["Marca"];
+					aux.Categoria = new Categoria();
+					aux.Categoria.Descripcion = (string)Datos.Lector["Categoria"];
 
 					lista.Add(aux);
 				}

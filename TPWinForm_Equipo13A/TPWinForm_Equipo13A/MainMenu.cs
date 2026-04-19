@@ -38,8 +38,18 @@ namespace TPWinForm_Equipo13A
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                dgvArticulos.DataSource = null;
                 listaArticulosOriginal = negocio.listar();
-                dgvArticulos.DataSource = listaArticulosOriginal;
+                dgvArticulos.DataSource = listaArticulosOriginal
+                    .Select(a => new {
+                        a.Id,
+                        a.Codigo,
+                        a.Nombre,
+                        a.Descripcion,
+                        a.Precio,
+                        Marca = a.Marca.Descripcion,
+                        Categoria = a.Categoria.Descripcion
+                    }).ToList();
             }
             catch (Exception ex)
             {
@@ -57,7 +67,7 @@ namespace TPWinForm_Equipo13A
 
             if (string.IsNullOrWhiteSpace(textBox_usuario.Text))
             {
-                dgvArticulos.DataSource = listaArticulosOriginal;
+                cargar();
                 return;
             }
 
@@ -80,7 +90,16 @@ namespace TPWinForm_Equipo13A
                 listaFiltrada = listaArticulosOriginal.Where(x => x.Categoria.Descripcion.ToUpper().Contains(filtro)).ToList();
             }
 
-            dgvArticulos.DataSource = listaFiltrada;
+            dgvArticulos.DataSource = listaFiltrada
+            .Select(a => new {
+            a.Id,
+            a.Codigo,
+            a.Nombre,
+            a.Descripcion,
+            a.Precio,
+            Marca = a.Marca.Descripcion,
+            Categoria = a.Categoria.Descripcion
+            }).ToList();
         }
 
         private void btnListadoArt_Click(object sender, EventArgs e)

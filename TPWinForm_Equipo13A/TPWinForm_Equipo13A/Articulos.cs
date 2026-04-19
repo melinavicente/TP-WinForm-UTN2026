@@ -8,90 +8,50 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
+using Negocio;
 
 namespace TPWinForm_Equipo13A
 {
     public partial class Articulos : Form
     {
+        private List<Articulo> listaArticulos;
         public Articulos()
         {
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+         private void Articulos_Load(object sender, EventArgs e) 
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                listaArticulos = negocio.listar();
+
+                lsbListadoArticulos.DataSource = listaArticulos;
+                lsbListadoArticulos.DisplayMember = "Nombre";
+                lsbListadoArticulos.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar artículos: " + ex.Message);
+            }
 
         }
-
-        private void Articulos_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lsbListadoArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Articulo SelectedArticulo = new Articulo();
+            Articulo ArticuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
 
-            if (lsbListadoArticulos.SelectedIndex == 0)
-            {
-            //Le asigno valores para testear si funciona rapido, lo pueden borrar si quieren
-            //Se que se puede optimizar, pero tengo sueño y queria testearlo nomas :p
-            SelectedArticulo.Id = 1;
-            SelectedArticulo.Nombre = "Basura";
-            SelectedArticulo.Codigo = "100";
-            SelectedArticulo.Descripcion = "Sirve para nada";
-            SelectedArticulo.Precio = 1000;
-            //SelectedArticulo.Marca = "Pepito";
-            //SelectedArticulo.Categoria = "Basura";
-
-            lblItemId.Text = SelectedArticulo.Codigo.ToString();
-            lblItemNombre.Text = SelectedArticulo.Nombre.ToString();
-            lblItemDescripcion.Text = SelectedArticulo.Descripcion.ToString();
-            lblItemPrecio.Text = SelectedArticulo.Precio.ToString();
-            //lblItemMarca.Text = SelectedArticulo.Marca.ToString();
-            //lblItemCategoria.Text = SelectedArticulo.Categoria.ToString();
-            }
-            else if (lsbListadoArticulos.SelectedIndex == 1)
-            {
-                SelectedArticulo.Id = 2;
-                SelectedArticulo.Nombre = "Compu";
-                SelectedArticulo.Codigo = "200";
-                SelectedArticulo.Descripcion = "Dispositivo";
-                SelectedArticulo.Precio = 150000;
-                //SelectedArticulo.Marca = "Pepito";
-                //SelectedArticulo.Categoria = "Basura";
-
-                lblItemId.Text = SelectedArticulo.Codigo.ToString();
-                lblItemNombre.Text = SelectedArticulo.Nombre.ToString();
-                lblItemDescripcion.Text = SelectedArticulo.Descripcion.ToString();
-                lblItemPrecio.Text = SelectedArticulo.Precio.ToString();
-                //lblItemMarca.Text = SelectedArticulo.Marca.ToString();
-                //lblItemCategoria.Text = SelectedArticulo.Categoria.ToString();
-            }
+            lblItemId.Text = ArticuloSeleccionado.Codigo;
+            lblItemNombre.Text = ArticuloSeleccionado.Nombre;
+            lblItemDescripcion.Text = ArticuloSeleccionado.Descripcion;
+            lblItemPrecio.Text = ArticuloSeleccionado.Precio.ToString();
+            lblItemMarca.Text = ArticuloSeleccionado.Marca.Descripcion;
+            lblItemCategoria.Text = ArticuloSeleccionado.Categoria.Descripcion;
 
 
         }
 
-        private void grpbDetalleProducto_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picProducto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btn_modificar_Click(object sender, EventArgs e)
-        {
-
-        }
         //PORQUE NO SE ENVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
@@ -117,6 +77,15 @@ namespace TPWinForm_Equipo13A
                 lblItemCategoria.Text = "";
             }
         }
+        private void grpbDetalleProducto_Enter(object sender, EventArgs e) { }
+        private void picProducto_Click(object sender, EventArgs e) { }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void btn_modificar_Click(object sender, EventArgs e) { }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
+
+      
 
     }
 }
