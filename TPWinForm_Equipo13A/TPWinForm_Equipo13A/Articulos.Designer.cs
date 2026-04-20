@@ -69,11 +69,6 @@
             this.lsbListadoArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbListadoArticulos.FormattingEnabled = true;
             this.lsbListadoArticulos.ItemHeight = 27;
-            this.lsbListadoArticulos.Items.AddRange(new object[] {
-            "item1",
-            "item2",
-            "item3",
-            "item4"});
             this.lsbListadoArticulos.Location = new System.Drawing.Point(53, 146);
             this.lsbListadoArticulos.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.lsbListadoArticulos.Name = "lsbListadoArticulos";
@@ -99,11 +94,11 @@
             this.grpbDetalleProducto.Controls.Add(this.lblIDProducto);
             this.grpbDetalleProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grpbDetalleProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpbDetalleProducto.Location = new System.Drawing.Point(293, 146);
+            this.grpbDetalleProducto.Location = new System.Drawing.Point(331, 146);
             this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpbDetalleProducto.Name = "grpbDetalleProducto";
             this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grpbDetalleProducto.Size = new System.Drawing.Size(309, 320);
+            this.grpbDetalleProducto.Size = new System.Drawing.Size(440, 320);
             this.grpbDetalleProducto.TabIndex = 3;
             this.grpbDetalleProducto.TabStop = false;
             this.grpbDetalleProducto.Text = "DETALLE";
@@ -229,8 +224,8 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(293, 502);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_eliminar.Location = new System.Drawing.Point(352, 502);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(309, 28);
             this.btn_eliminar.TabIndex = 5;
@@ -240,8 +235,8 @@
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(293, 551);
-            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_modificar.Location = new System.Drawing.Point(352, 549);
+            this.btn_modificar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(309, 28);
             this.btn_modificar.TabIndex = 6;
@@ -251,17 +246,18 @@
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(293, 607);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_agregar.Location = new System.Drawing.Point(352, 598);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(309, 28);
             this.btn_agregar.TabIndex = 7;
             this.btn_agregar.Text = "Agregar ";
             this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // pcbImagenArticulo
             // 
-            this.pcbImagenArticulo.Location = new System.Drawing.Point(651, 166);
+            this.pcbImagenArticulo.Location = new System.Drawing.Point(894, 187);
             this.pcbImagenArticulo.Name = "pcbImagenArticulo";
             this.pcbImagenArticulo.Size = new System.Drawing.Size(216, 182);
             this.pcbImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -270,7 +266,7 @@
             // 
             // btnImagenAnterior
             // 
-            this.btnImagenAnterior.Location = new System.Drawing.Point(651, 400);
+            this.btnImagenAnterior.Location = new System.Drawing.Point(894, 417);
             this.btnImagenAnterior.Name = "btnImagenAnterior";
             this.btnImagenAnterior.Size = new System.Drawing.Size(75, 23);
             this.btnImagenAnterior.TabIndex = 9;
@@ -280,7 +276,7 @@
             // 
             // btnImagenSiguiente
             // 
-            this.btnImagenSiguiente.Location = new System.Drawing.Point(792, 400);
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(1035, 417);
             this.btnImagenSiguiente.Name = "btnImagenSiguiente";
             this.btnImagenSiguiente.Size = new System.Drawing.Size(75, 23);
             this.btnImagenSiguiente.TabIndex = 10;
@@ -306,7 +302,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Articulos";
             this.Text = "Articulos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Articulos_Load);
             this.grpbDetalleProducto.ResumeLayout(false);
             this.grpbDetalleProducto.PerformLayout();

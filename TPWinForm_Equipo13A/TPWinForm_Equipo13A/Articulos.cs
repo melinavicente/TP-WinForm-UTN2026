@@ -138,5 +138,11 @@ namespace TPWinForm_Equipo13A
 
             cargarImagen(articuloSeleccionado.Imagenes[indiceImagen].URL);
         }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            AgregarArticulo art = new AgregarArticulo();
+            art.ShowDialog();
+        }
     }
 }
