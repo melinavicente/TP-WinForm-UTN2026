@@ -1,41 +1,32 @@
 ﻿using dominio;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class CategoriaNegocio
+    public class MarcaNegocio
     {
-        public List<Categoria> listar()
+        public List<Marca> listar()
         {
-            List<Categoria> lista = new List<Categoria>();
-
+            List<Marca> lista = new List<Marca>();
             AccesoDatos Datos = new AccesoDatos();
-
             try
             {
-                Datos.setearConsulta("Select Id, Descripcion from CATEGORIAS");
+                Datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
                 Datos.ejecutarLectura();
-
                 while (Datos.Lector.Read())
                 {
-                    Categoria aux = new Categoria();
+                    Marca aux = new Marca();
                     aux.Id = Datos.Lector.GetInt32(0);
                     aux.Descripcion = (String)Datos.Lector["Descripcion"];
-
                     lista.Add(aux);
                 }
-
                 Datos.CerrarConexion();
                 return lista;
             }
             catch (Exception ex)
             {
                 throw ex;
-
             }
         }
     }

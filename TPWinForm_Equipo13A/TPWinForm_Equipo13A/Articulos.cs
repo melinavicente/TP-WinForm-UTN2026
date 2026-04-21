@@ -41,28 +41,33 @@ namespace TPWinForm_Equipo13A
         }
         private void lsbListadoArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (lsbListadoArticulos.SelectedItem == null) return;
 
-            Articulo ArticuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
-
-            lblItemId.Text = ArticuloSeleccionado.Codigo;
-            lblItemNombre.Text = ArticuloSeleccionado.Nombre;
-            lblItemDescripcion.Text = ArticuloSeleccionado.Descripcion;
-            lblItemPrecio.Text = ArticuloSeleccionado.Precio.ToString();
-            lblItemMarca.Text = ArticuloSeleccionado.Marca.Descripcion;
-            lblItemCategoria.Text = ArticuloSeleccionado.Categoria.Descripcion;
-
-            List<Imagen> listaImagenes = new List<Imagen>();
-            listaImagenes = ArticuloSeleccionado.Imagenes;
-
-
-            if (listaImagenes != null && listaImagenes.Count > 0)
+            try
             {
-                cargarImagen(listaImagenes[0].URL);
-            }
+                Articulo ArticuloSeleccionado = (dominio.Articulo)lsbListadoArticulos.SelectedItem;
 
+                lblItemId.Text = ArticuloSeleccionado.Codigo;
+                lblItemNombre.Text = ArticuloSeleccionado.Nombre;
+                lblItemDescripcion.Text = ArticuloSeleccionado.Descripcion;
+                lblItemPrecio.Text = ArticuloSeleccionado.Precio.ToString();
+                lblItemMarca.Text = ArticuloSeleccionado.Marca.Descripcion;
+                lblItemCategoria.Text = ArticuloSeleccionado.Categoria.Descripcion;
+
+                indiceImagen = 0;
+
+                if (ArticuloSeleccionado.Imagenes != null && ArticuloSeleccionado.Imagenes.Count > 0)
+                {
+                    cargarImagen(ArticuloSeleccionado.Imagenes[0].URL);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
-        //PORQUE NO SE ENVIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             if (lsbListadoArticulos.SelectedIndex == -1)
@@ -72,12 +77,20 @@ namespace TPWinForm_Equipo13A
             }
 
             DialogResult confirmacion = MessageBox.Show("Estas por eliminar un articulo", "Confirmar eliminación",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
+             MessageBoxButtons.YesNo,MessageBoxIcon.Question);
 
             if (confirmacion == DialogResult.Yes)
             {
-                lsbListadoArticulos.Items.RemoveAt(lsbListadoArticulos.SelectedIndex);
+                dominio.Articulo seleccionado = (dominio.Articulo)lsbListadoArticulos.SelectedItem;
+
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                negocio.eliminar(seleccionado.Id);
+
+                listaArticulos.Remove(seleccionado);
+                lsbListadoArticulos.DataSource = null;
+                lsbListadoArticulos.DataSource = listaArticulos;
+                lsbListadoArticulos.DisplayMember = "Nombre";
+                lsbListadoArticulos.ValueMember = "Id";
 
                 lblItemId.Text = "";
                 lblItemNombre.Text = "";
