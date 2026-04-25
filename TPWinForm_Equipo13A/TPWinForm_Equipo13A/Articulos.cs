@@ -117,6 +117,8 @@ namespace TPWinForm_Equipo13A
 
             AgregarArticulo modificar = new AgregarArticulo(seleccionado);
             modificar.ShowDialog();
+            
+            
 
 
             actualizarListado(negocio);

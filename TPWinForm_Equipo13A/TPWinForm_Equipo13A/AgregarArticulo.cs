@@ -19,6 +19,7 @@ namespace TPWinForm_Equipo13A
         public AgregarArticulo()
         {
             InitializeComponent();
+            btnAdministrarImg.Hide();
         }
 
         public AgregarArticulo(Articulo articulo)
@@ -26,6 +27,8 @@ namespace TPWinForm_Equipo13A
             InitializeComponent();
             this.articulo = articulo;
             Text = "Modificar Articulo";
+            txtbAgregarURL.Hide();
+
         }
 
         private void btnAgregarAceptar_Click(object sender, EventArgs e)
@@ -112,6 +115,17 @@ namespace TPWinForm_Equipo13A
         private void txtbAgregarURL_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregarCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnAdministrarImg_Click(object sender, EventArgs e)
+        {
+            Imagenes formImagenes = new Imagenes(articulo);
+            formImagenes.ShowDialog();
         }
     }
     }

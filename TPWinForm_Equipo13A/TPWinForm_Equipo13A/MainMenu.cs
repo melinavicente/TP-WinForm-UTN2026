@@ -49,6 +49,7 @@ namespace TPWinForm_Equipo13A
                         a.Precio,
                         Marca = a.Marca.Descripcion,
                         Categoria = a.Categoria.Descripcion
+                        
                     }).ToList();
             }
             catch (Exception ex)
@@ -122,6 +123,7 @@ namespace TPWinForm_Equipo13A
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            
         }
     }
 }
