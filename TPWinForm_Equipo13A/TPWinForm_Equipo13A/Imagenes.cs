@@ -113,14 +113,15 @@ namespace TPWinForm_Equipo13A
                 Imagen nuevaImagen = new Imagen();
                 ArticuloNegocio negocio = new ArticuloNegocio();
 
-                Imagen imagenSeleccionada = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
                 string AgregarURL = txtAgregarNuevaURL.Text;
 
                 nuevaImagen.URL = AgregarURL;
-                nuevaImagen.IdArticulo = imagenSeleccionada.IdArticulo;
+                nuevaImagen.IdArticulo = articulo.Id;
 
                 negocio.agregarImagen(nuevaImagen);
-                                        
+
+                listaImagenes.Add(nuevaImagen);
+
 
             }
 
