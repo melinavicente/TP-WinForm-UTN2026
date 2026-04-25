@@ -41,6 +41,7 @@
             // 
             // btnListadoArt
             // 
+            this.btnListadoArt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnListadoArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListadoArt.Location = new System.Drawing.Point(28, 307);
             this.btnListadoArt.Margin = new System.Windows.Forms.Padding(2);
@@ -48,7 +49,7 @@
             this.btnListadoArt.Size = new System.Drawing.Size(172, 38);
             this.btnListadoArt.TabIndex = 0;
             this.btnListadoArt.Text = "Artículos";
-            this.btnListadoArt.UseVisualStyleBackColor = true;
+            this.btnListadoArt.UseVisualStyleBackColor = false;
             this.btnListadoArt.Click += new System.EventHandler(this.btnListadoArt_Click);
             // 
             // textBox_usuario
@@ -80,12 +81,13 @@
             // 
             // btn_buscar
             // 
+            this.btn_buscar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btn_buscar.Location = new System.Drawing.Point(513, 31);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
             this.btn_buscar.TabIndex = 4;
             this.btn_buscar.Text = "Buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // dgvArticulos
@@ -100,6 +102,7 @@
             // 
             // btnMarcas
             // 
+            this.btnMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcas.Location = new System.Drawing.Point(220, 307);
             this.btnMarcas.Margin = new System.Windows.Forms.Padding(2);
@@ -107,11 +110,12 @@
             this.btnMarcas.Size = new System.Drawing.Size(169, 38);
             this.btnMarcas.TabIndex = 6;
             this.btnMarcas.Text = "Marcas";
-            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.UseVisualStyleBackColor = false;
             this.btnMarcas.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCategorias
             // 
+            this.btnCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategorias.Location = new System.Drawing.Point(406, 307);
             this.btnCategorias.Margin = new System.Windows.Forms.Padding(2);
@@ -119,7 +123,7 @@
             this.btnCategorias.Size = new System.Drawing.Size(169, 38);
             this.btnCategorias.TabIndex = 7;
             this.btnCategorias.Text = "Categorías";
-            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.UseVisualStyleBackColor = false;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // MainMenu

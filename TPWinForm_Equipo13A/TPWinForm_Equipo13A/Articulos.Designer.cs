@@ -68,6 +68,7 @@
             // 
             // lsbListadoArticulos
             // 
+            this.lsbListadoArticulos.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lsbListadoArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbListadoArticulos.FormattingEnabled = true;
             this.lsbListadoArticulos.ItemHeight = 21;
@@ -80,7 +81,7 @@
             // 
             // grpbDetalleProducto
             // 
-            this.grpbDetalleProducto.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.grpbDetalleProducto.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.grpbDetalleProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpbDetalleProducto.Controls.Add(this.lblItemDescripcion);
             this.grpbDetalleProducto.Controls.Add(this.lblItemPrecio);
@@ -97,9 +98,9 @@
             this.grpbDetalleProducto.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.grpbDetalleProducto.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpbDetalleProducto.Location = new System.Drawing.Point(248, 119);
-            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbDetalleProducto.Margin = new System.Windows.Forms.Padding(2);
             this.grpbDetalleProducto.Name = "grpbDetalleProducto";
-            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpbDetalleProducto.Padding = new System.Windows.Forms.Padding(2);
             this.grpbDetalleProducto.Size = new System.Drawing.Size(330, 260);
             this.grpbDetalleProducto.TabIndex = 3;
             this.grpbDetalleProducto.TabStop = false;
@@ -239,38 +240,41 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(264, 408);
+            this.btn_eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_eliminar.Location = new System.Drawing.Point(294, 401);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(232, 23);
             this.btn_eliminar.TabIndex = 5;
             this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.UseVisualStyleBackColor = false;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Location = new System.Drawing.Point(264, 446);
+            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_modificar.Location = new System.Drawing.Point(294, 439);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(232, 23);
             this.btn_modificar.TabIndex = 6;
             this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_agregar
             // 
-            this.btn_agregar.Location = new System.Drawing.Point(264, 486);
+            this.btn_agregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_agregar.Location = new System.Drawing.Point(294, 479);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(232, 23);
             this.btn_agregar.TabIndex = 7;
             this.btn_agregar.Text = "Agregar ";
-            this.btn_agregar.UseVisualStyleBackColor = true;
+            this.btn_agregar.UseVisualStyleBackColor = false;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // pcbImagenArticulo
             // 
             this.pcbImagenArticulo.Location = new System.Drawing.Point(670, 152);
-            this.pcbImagenArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagenArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagenArticulo.Name = "pcbImagenArticulo";
             this.pcbImagenArticulo.Size = new System.Drawing.Size(162, 148);
             this.pcbImagenArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -279,28 +283,31 @@
             // 
             // btnImagenAnterior
             // 
-            this.btnImagenAnterior.Location = new System.Drawing.Point(670, 339);
-            this.btnImagenAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImagenAnterior.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnImagenAnterior.Location = new System.Drawing.Point(670, 306);
+            this.btnImagenAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnImagenAnterior.Name = "btnImagenAnterior";
-            this.btnImagenAnterior.Size = new System.Drawing.Size(56, 19);
+            this.btnImagenAnterior.Size = new System.Drawing.Size(74, 22);
             this.btnImagenAnterior.TabIndex = 9;
             this.btnImagenAnterior.Text = "Anterior";
-            this.btnImagenAnterior.UseVisualStyleBackColor = true;
+            this.btnImagenAnterior.UseVisualStyleBackColor = false;
             this.btnImagenAnterior.Click += new System.EventHandler(this.btnImagenAnterior_Click);
             // 
             // btnImagenSiguiente
             // 
-            this.btnImagenSiguiente.Location = new System.Drawing.Point(776, 339);
-            this.btnImagenSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnImagenSiguiente.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnImagenSiguiente.Location = new System.Drawing.Point(748, 306);
+            this.btnImagenSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnImagenSiguiente.Name = "btnImagenSiguiente";
-            this.btnImagenSiguiente.Size = new System.Drawing.Size(56, 19);
+            this.btnImagenSiguiente.Size = new System.Drawing.Size(74, 22);
             this.btnImagenSiguiente.TabIndex = 10;
             this.btnImagenSiguiente.Text = "Siguiente";
-            this.btnImagenSiguiente.UseVisualStyleBackColor = true;
+            this.btnImagenSiguiente.UseVisualStyleBackColor = false;
             this.btnImagenSiguiente.Click += new System.EventHandler(this.btnImagenSiguiente_Click);
             // 
             // lblSinImagen
             // 
+            this.lblSinImagen.BackColor = System.Drawing.SystemColors.ControlDark;
             this.lblSinImagen.Location = new System.Drawing.Point(667, 152);
             this.lblSinImagen.Name = "lblSinImagen";
             this.lblSinImagen.Size = new System.Drawing.Size(165, 148);
@@ -325,7 +332,7 @@
             this.Controls.Add(this.grpbDetalleProducto);
             this.Controls.Add(this.lsbListadoArticulos);
             this.Controls.Add(this.lblArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Articulos";
             this.Text = "Articulos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Articulos_FormClosed);

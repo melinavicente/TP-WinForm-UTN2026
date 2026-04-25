@@ -34,82 +34,95 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblSubTittle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblArticulos
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulos.Location = new System.Drawing.Point(15, 11);
+            this.lblArticulos.Location = new System.Drawing.Point(11, 9);
+            this.lblArticulos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArticulos.Name = "lblArticulos";
-            this.lblArticulos.Size = new System.Drawing.Size(189, 50);
+            this.lblArticulos.Size = new System.Drawing.Size(153, 40);
             this.lblArticulos.TabIndex = 2;
             this.lblArticulos.Text = "MARCAS";
             this.lblArticulos.Click += new System.EventHandler(this.lblArticulos_Click);
             // 
             // lsbMarcas
             // 
+            this.lsbMarcas.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lsbMarcas.FormattingEnabled = true;
-            this.lsbMarcas.ItemHeight = 16;
-            this.lsbMarcas.Location = new System.Drawing.Point(24, 65);
-            this.lsbMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsbMarcas.Location = new System.Drawing.Point(18, 53);
             this.lsbMarcas.Name = "lsbMarcas";
-            this.lsbMarcas.Size = new System.Drawing.Size(181, 452);
+            this.lsbMarcas.Size = new System.Drawing.Size(137, 368);
             this.lsbMarcas.TabIndex = 3;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(240, 161);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.ForeColor = System.Drawing.Color.Black;
+            this.txtDescripcion.Location = new System.Drawing.Point(196, 110);
+            this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(315, 22);
+            this.txtDescripcion.Size = new System.Drawing.Size(237, 96);
             this.txtDescripcion.TabIndex = 4;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(240, 193);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAgregar.Location = new System.Drawing.Point(196, 226);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(75, 24);
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(348, 193);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnModificar.Location = new System.Drawing.Point(277, 226);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 28);
+            this.btnModificar.Size = new System.Drawing.Size(75, 24);
             this.btnModificar.TabIndex = 6;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(456, 193);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnEliminar.Location = new System.Drawing.Point(358, 226);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 24);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblSubTittle
+            // 
+            this.lblSubTittle.AutoSize = true;
+            this.lblSubTittle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubTittle.Location = new System.Drawing.Point(192, 87);
+            this.lblSubTittle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubTittle.Name = "lblSubTittle";
+            this.lblSubTittle.Size = new System.Drawing.Size(108, 20);
+            this.lblSubTittle.TabIndex = 14;
+            this.lblSubTittle.Text = "Escriba algo...";
             // 
             // Marcas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(467, 458);
+            this.Controls.Add(this.lblSubTittle);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.lsbMarcas);
             this.Controls.Add(this.lblArticulos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Marcas";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Marcas_FormClosed_1);
@@ -127,5 +140,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label lblSubTittle;
     }
 }

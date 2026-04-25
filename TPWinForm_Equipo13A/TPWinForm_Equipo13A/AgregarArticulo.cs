@@ -125,5 +125,10 @@ namespace TPWinForm_Equipo13A
             formImagenes.ShowDialog();
 
         }
+
+        private void lblAgregarCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }

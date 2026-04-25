@@ -49,63 +49,71 @@
             // 
             // txtAgregarCodigo
             // 
-            this.txtAgregarCodigo.Location = new System.Drawing.Point(165, 80);
-            this.txtAgregarCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAgregarCodigo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAgregarCodigo.Location = new System.Drawing.Point(124, 65);
+            this.txtAgregarCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAgregarCodigo.Name = "txtAgregarCodigo";
-            this.txtAgregarCodigo.Size = new System.Drawing.Size(100, 22);
+            this.txtAgregarCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtAgregarCodigo.TabIndex = 0;
             // 
             // lblAgregarNombre
             // 
             this.lblAgregarNombre.AutoSize = true;
-            this.lblAgregarNombre.Location = new System.Drawing.Point(69, 132);
+            this.lblAgregarNombre.Location = new System.Drawing.Point(52, 107);
+            this.lblAgregarNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarNombre.Name = "lblAgregarNombre";
-            this.lblAgregarNombre.Size = new System.Drawing.Size(59, 16);
+            this.lblAgregarNombre.Size = new System.Drawing.Size(47, 13);
             this.lblAgregarNombre.TabIndex = 1;
             this.lblAgregarNombre.Text = "Nombre:";
             // 
             // lblAgregarCodigo
             // 
             this.lblAgregarCodigo.AutoSize = true;
-            this.lblAgregarCodigo.Location = new System.Drawing.Point(69, 82);
+            this.lblAgregarCodigo.Location = new System.Drawing.Point(52, 67);
+            this.lblAgregarCodigo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarCodigo.Name = "lblAgregarCodigo";
-            this.lblAgregarCodigo.Size = new System.Drawing.Size(54, 16);
+            this.lblAgregarCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblAgregarCodigo.TabIndex = 2;
             this.lblAgregarCodigo.Text = "Codigo:";
+            this.lblAgregarCodigo.Click += new System.EventHandler(this.lblAgregarCodigo_Click);
             // 
             // lblAgregarDescripcion
             // 
             this.lblAgregarDescripcion.AutoSize = true;
-            this.lblAgregarDescripcion.Location = new System.Drawing.Point(69, 178);
+            this.lblAgregarDescripcion.Location = new System.Drawing.Point(52, 145);
+            this.lblAgregarDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarDescripcion.Name = "lblAgregarDescripcion";
-            this.lblAgregarDescripcion.Size = new System.Drawing.Size(82, 16);
+            this.lblAgregarDescripcion.Size = new System.Drawing.Size(66, 13);
             this.lblAgregarDescripcion.TabIndex = 3;
             this.lblAgregarDescripcion.Text = "Descripción:";
             // 
             // lblAgregarMarca
             // 
             this.lblAgregarMarca.AutoSize = true;
-            this.lblAgregarMarca.Location = new System.Drawing.Point(69, 226);
+            this.lblAgregarMarca.Location = new System.Drawing.Point(52, 184);
+            this.lblAgregarMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarMarca.Name = "lblAgregarMarca";
-            this.lblAgregarMarca.Size = new System.Drawing.Size(48, 16);
+            this.lblAgregarMarca.Size = new System.Drawing.Size(40, 13);
             this.lblAgregarMarca.TabIndex = 4;
             this.lblAgregarMarca.Text = "Marca:";
             // 
             // lblAgregarCategoria
             // 
             this.lblAgregarCategoria.AutoSize = true;
-            this.lblAgregarCategoria.Location = new System.Drawing.Point(69, 274);
+            this.lblAgregarCategoria.Location = new System.Drawing.Point(52, 223);
+            this.lblAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarCategoria.Name = "lblAgregarCategoria";
-            this.lblAgregarCategoria.Size = new System.Drawing.Size(69, 16);
+            this.lblAgregarCategoria.Size = new System.Drawing.Size(55, 13);
             this.lblAgregarCategoria.TabIndex = 5;
             this.lblAgregarCategoria.Text = "Categoria:";
             // 
             // lblAgregarPrecio
             // 
             this.lblAgregarPrecio.AutoSize = true;
-            this.lblAgregarPrecio.Location = new System.Drawing.Point(69, 327);
+            this.lblAgregarPrecio.Location = new System.Drawing.Point(52, 266);
+            this.lblAgregarPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarPrecio.Name = "lblAgregarPrecio";
-            this.lblAgregarPrecio.Size = new System.Drawing.Size(59, 16);
+            this.lblAgregarPrecio.Size = new System.Drawing.Size(49, 13);
             this.lblAgregarPrecio.TabIndex = 6;
             this.lblAgregarPrecio.Text = "Precio: $";
             this.lblAgregarPrecio.Click += new System.EventHandler(this.lblAgregarPrecio_Click);
@@ -113,100 +121,112 @@
             // lblAgregarURL
             // 
             this.lblAgregarURL.AutoSize = true;
-            this.lblAgregarURL.Location = new System.Drawing.Point(69, 382);
+            this.lblAgregarURL.Location = new System.Drawing.Point(52, 310);
+            this.lblAgregarURL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAgregarURL.Name = "lblAgregarURL";
-            this.lblAgregarURL.Size = new System.Drawing.Size(37, 16);
+            this.lblAgregarURL.Size = new System.Drawing.Size(32, 13);
             this.lblAgregarURL.TabIndex = 7;
             this.lblAgregarURL.Text = "URL:";
             // 
             // txtAgregarNombre
             // 
-            this.txtAgregarNombre.Location = new System.Drawing.Point(165, 132);
-            this.txtAgregarNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAgregarNombre.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtAgregarNombre.Location = new System.Drawing.Point(124, 107);
+            this.txtAgregarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAgregarNombre.Name = "txtAgregarNombre";
-            this.txtAgregarNombre.Size = new System.Drawing.Size(100, 22);
+            this.txtAgregarNombre.Size = new System.Drawing.Size(76, 20);
             this.txtAgregarNombre.TabIndex = 8;
             // 
             // txtbAgregarDescripcion
             // 
-            this.txtbAgregarDescripcion.Location = new System.Drawing.Point(165, 178);
-            this.txtbAgregarDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtbAgregarDescripcion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtbAgregarDescripcion.Location = new System.Drawing.Point(124, 145);
+            this.txtbAgregarDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbAgregarDescripcion.Name = "txtbAgregarDescripcion";
-            this.txtbAgregarDescripcion.Size = new System.Drawing.Size(100, 22);
+            this.txtbAgregarDescripcion.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarDescripcion.TabIndex = 9;
             // 
             // cmbAgregarMarca
             // 
+            this.cmbAgregarMarca.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cmbAgregarMarca.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbAgregarMarca.FormattingEnabled = true;
-            this.cmbAgregarMarca.Location = new System.Drawing.Point(165, 226);
-            this.cmbAgregarMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAgregarMarca.Location = new System.Drawing.Point(124, 184);
+            this.cmbAgregarMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAgregarMarca.Name = "cmbAgregarMarca";
-            this.cmbAgregarMarca.Size = new System.Drawing.Size(121, 24);
+            this.cmbAgregarMarca.Size = new System.Drawing.Size(92, 21);
             this.cmbAgregarMarca.TabIndex = 10;
             // 
             // cmbAgregarCategoria
             // 
+            this.cmbAgregarCategoria.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cmbAgregarCategoria.FormattingEnabled = true;
-            this.cmbAgregarCategoria.Location = new System.Drawing.Point(165, 274);
-            this.cmbAgregarCategoria.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbAgregarCategoria.Location = new System.Drawing.Point(124, 223);
+            this.cmbAgregarCategoria.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbAgregarCategoria.Name = "cmbAgregarCategoria";
-            this.cmbAgregarCategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbAgregarCategoria.Size = new System.Drawing.Size(92, 21);
             this.cmbAgregarCategoria.TabIndex = 11;
             // 
             // txtbAgregarPrecio
             // 
-            this.txtbAgregarPrecio.Location = new System.Drawing.Point(165, 321);
-            this.txtbAgregarPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtbAgregarPrecio.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtbAgregarPrecio.Location = new System.Drawing.Point(124, 261);
+            this.txtbAgregarPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbAgregarPrecio.Name = "txtbAgregarPrecio";
-            this.txtbAgregarPrecio.Size = new System.Drawing.Size(100, 22);
+            this.txtbAgregarPrecio.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarPrecio.TabIndex = 12;
             // 
             // txtbAgregarURL
             // 
-            this.txtbAgregarURL.Location = new System.Drawing.Point(165, 382);
-            this.txtbAgregarURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtbAgregarURL.Location = new System.Drawing.Point(124, 310);
+            this.txtbAgregarURL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtbAgregarURL.Name = "txtbAgregarURL";
-            this.txtbAgregarURL.Size = new System.Drawing.Size(100, 22);
+            this.txtbAgregarURL.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarURL.TabIndex = 13;
             this.txtbAgregarURL.TextChanged += new System.EventHandler(this.txtbAgregarURL_TextChanged);
             // 
             // btnAgregarAceptar
             // 
-            this.btnAgregarAceptar.Location = new System.Drawing.Point(87, 452);
-            this.btnAgregarAceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAgregarAceptar.Location = new System.Drawing.Point(55, 357);
+            this.btnAgregarAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarAceptar.Name = "btnAgregarAceptar";
-            this.btnAgregarAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarAceptar.Size = new System.Drawing.Size(77, 31);
             this.btnAgregarAceptar.TabIndex = 14;
             this.btnAgregarAceptar.Text = "Agregar";
-            this.btnAgregarAceptar.UseVisualStyleBackColor = true;
+            this.btnAgregarAceptar.UseVisualStyleBackColor = false;
             this.btnAgregarAceptar.Click += new System.EventHandler(this.btnAgregarAceptar_Click);
             // 
             // btnAgregarCancelar
             // 
-            this.btnAgregarCancelar.Location = new System.Drawing.Point(231, 452);
-            this.btnAgregarCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAgregarCancelar.Location = new System.Drawing.Point(136, 357);
+            this.btnAgregarCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarCancelar.Name = "btnAgregarCancelar";
-            this.btnAgregarCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarCancelar.Size = new System.Drawing.Size(81, 31);
             this.btnAgregarCancelar.TabIndex = 15;
             this.btnAgregarCancelar.Text = "Cancelar";
-            this.btnAgregarCancelar.UseVisualStyleBackColor = true;
+            this.btnAgregarCancelar.UseVisualStyleBackColor = false;
             this.btnAgregarCancelar.Click += new System.EventHandler(this.btnAgregarCancelar_Click);
             // 
             // btnAdministrarImg
             // 
-            this.btnAdministrarImg.Location = new System.Drawing.Point(165, 367);
+            this.btnAdministrarImg.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAdministrarImg.Location = new System.Drawing.Point(124, 295);
+            this.btnAdministrarImg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarImg.Name = "btnAdministrarImg";
-            this.btnAdministrarImg.Size = new System.Drawing.Size(141, 52);
+            this.btnAdministrarImg.Size = new System.Drawing.Size(76, 42);
             this.btnAdministrarImg.TabIndex = 16;
             this.btnAdministrarImg.Text = "Administrar Imagenes";
-            this.btnAdministrarImg.UseVisualStyleBackColor = true;
+            this.btnAdministrarImg.UseVisualStyleBackColor = false;
             this.btnAdministrarImg.Click += new System.EventHandler(this.btnAdministrarImg_Click);
             // 
             // AgregarArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 526);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(284, 427);
             this.Controls.Add(this.btnAdministrarImg);
             this.Controls.Add(this.btnAgregarCancelar);
             this.Controls.Add(this.btnAgregarAceptar);
@@ -224,7 +244,7 @@
             this.Controls.Add(this.lblAgregarCodigo);
             this.Controls.Add(this.lblAgregarNombre);
             this.Controls.Add(this.txtAgregarCodigo);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AgregarArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarArticulo";
@@ -246,12 +266,12 @@
         private System.Windows.Forms.Label lblAgregarURL;
         private System.Windows.Forms.TextBox txtAgregarNombre;
         private System.Windows.Forms.TextBox txtbAgregarDescripcion;
-        private System.Windows.Forms.ComboBox cmbAgregarMarca;
         private System.Windows.Forms.ComboBox cmbAgregarCategoria;
         private System.Windows.Forms.TextBox txtbAgregarPrecio;
         private System.Windows.Forms.TextBox txtbAgregarURL;
         private System.Windows.Forms.Button btnAgregarAceptar;
         private System.Windows.Forms.Button btnAgregarCancelar;
         private System.Windows.Forms.Button btnAdministrarImg;
+        private System.Windows.Forms.ComboBox cmbAgregarMarca;
     }
 }
