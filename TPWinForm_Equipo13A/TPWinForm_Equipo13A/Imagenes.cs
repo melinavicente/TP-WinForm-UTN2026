@@ -56,30 +56,34 @@ namespace TPWinForm_Equipo13A
         {
             try
             {
-                if (dgvImagenes.CurrentRow != null)
-                {
-                    Imagen img = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+                if (dgvImagenes.CurrentRow == null)
+                    return;
 
-                    if (img != null)
-                        pcbImagenes.LoadAsync(img.URL);
+                if (dgvImagenes.CurrentRow.DataBoundItem == null)
+                    return;
+
+                Imagen img = (Imagen)dgvImagenes.CurrentRow.DataBoundItem;
+
+                if (img != null)
+                {
+                    pcbImagenes.LoadAsync(img.URL);
                 }
                 else
                 {
                     pcbImagenes.Visible = false;
                     lblnoImg.Visible = true;
                 }
-
             }
-            catch (Exception ex)
+            catch
             {
-
-                MessageBox.Show("Error: " + ex.Message);
+                pcbImagenes.Visible = false;
+                lblnoImg.Visible = true;
             }
         }
 
         private void btnEliminarImagen_Click(object sender, EventArgs e)
         {
-            if(dgvImagenes.SelectedRows.Count == -1)
+            if(dgvImagenes.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Por favor, seleccione una imagen para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -97,6 +101,8 @@ namespace TPWinForm_Equipo13A
                 negocio.eliminarImagen(img);
 
                 listaImagenes.Remove(img);
+
+                cargarImagenes();
 
             }
             
@@ -117,14 +123,32 @@ namespace TPWinForm_Equipo13A
 
                 nuevaImagen.URL = AgregarURL;
                 nuevaImagen.IdArticulo = articulo.Id;
-
-                negocio.agregarImagen(nuevaImagen);
+                nuevaImagen.Id = negocio.agregarImagen(nuevaImagen);
 
                 listaImagenes.Add(nuevaImagen);
-
+                cargarImagenes();
 
             }
+        }
 
+        private void cargarImagenes()
+        {
+            dgvImagenes.DataSource = null;
+            dgvImagenes.DataSource = listaImagenes;
+            dgvImagenes.AutoResizeColumns();
+
+            if (listaImagenes.Count > 0)
+            {
+                dgvImagenes.Rows[0].Selected = true;
+                pcbImagenes.LoadAsync(listaImagenes[0].URL);
+                pcbImagenes.Visible = true;
+                lblnoImg.Visible = false;
+            }
+            else
+            {
+                pcbImagenes.Visible = false;
+                lblnoImg.Visible = true;
+            }
         }
 
     }

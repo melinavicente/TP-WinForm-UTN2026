@@ -28,6 +28,7 @@ namespace Negocio
         {
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
+
         }
 
         public void ejecutarLectura()
@@ -78,5 +79,30 @@ namespace Negocio
         {
             comando.Parameters.AddWithValue(nombre, valor);
         }
+
+        public object ejecutarScalar()
+        {
+
+            try
+            {
+
+                comando.Connection = conexion;
+                conexion.Open();
+                object resultado = comando.ExecuteScalar();
+                return resultado;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+        }
+
     }
 }

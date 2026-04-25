@@ -176,17 +176,20 @@ namespace Negocio
             }
         }
 
-        public void agregarImagen(Imagen img)
+        public int agregarImagen(Imagen img)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) VALUES(@IdArticulo, @ImagenUrl)");
+                datos.setearConsulta("INSERT INTO IMAGENES(IdArticulo, ImagenUrl) OUTPUT INSERTED.Id VALUES(@IdArticulo, @ImagenUrl)");
                 datos.setearParametro("@IdArticulo", img.IdArticulo);
                 datos.setearParametro("@ImagenUrl", img.URL);
-                datos.ejecutarAccion();
-                                
+
+                int idGenerado = (int)datos.ejecutarScalar();
+
+                return idGenerado;
+                                                
             }
             catch (Exception ex)
             {
