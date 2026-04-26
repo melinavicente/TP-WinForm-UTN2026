@@ -51,13 +51,6 @@ namespace TPWinForm_Equipo13A
 
         }
 
-
-
-        private void lblArticulos_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if (lsbMarcas.SelectedItem == null)

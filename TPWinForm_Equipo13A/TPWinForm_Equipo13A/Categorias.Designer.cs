@@ -108,7 +108,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(237, 96);
             this.txtDescripcion.TabIndex = 9;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Categorias
             // 

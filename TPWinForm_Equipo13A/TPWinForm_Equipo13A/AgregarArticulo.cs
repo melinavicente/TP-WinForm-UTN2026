@@ -81,11 +81,6 @@ namespace TPWinForm_Equipo13A
             this.Close();
         }
 
-        private void lblAgregarPrecio_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AgregarArticulo_Load_1(object sender, EventArgs e)
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio();
@@ -108,12 +103,6 @@ namespace TPWinForm_Equipo13A
                 txtbAgregarPrecio.Text = articulo.Precio.ToString();
             }
         }
-
-        private void txtbAgregarURL_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAgregarCancelar_Click(object sender, EventArgs e)
         {
             Close();
@@ -126,9 +115,5 @@ namespace TPWinForm_Equipo13A
 
         }
 
-        private void lblAgregarCodigo_Click(object sender, EventArgs e)
-        {
-
-        }
     }
     }

@@ -38,8 +38,8 @@ namespace TPWinForm_Equipo13A
         }
         private void lsbListadoArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Articulo articuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
             if (lsbListadoArticulos.SelectedItem == null) return;
+            Articulo articuloSeleccionado = listaArticulos[lsbListadoArticulos.SelectedIndex];
 
             try
             {
@@ -105,10 +105,6 @@ namespace TPWinForm_Equipo13A
                 lblItemCategoria.Text = "";
             }
         }
-        private void grpbDetalleProducto_Enter(object sender, EventArgs e) { }
-        private void picProducto_Click(object sender, EventArgs e) { }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void btn_modificar_Click(object sender, EventArgs e) {
 
@@ -120,7 +116,6 @@ namespace TPWinForm_Equipo13A
             actualizarListado(negocio);
 
         }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void cargarImagen(string url)
         {

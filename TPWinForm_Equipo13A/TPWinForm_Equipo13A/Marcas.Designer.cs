@@ -47,7 +47,6 @@
             this.lblArticulos.Size = new System.Drawing.Size(153, 40);
             this.lblArticulos.TabIndex = 2;
             this.lblArticulos.Text = "MARCAS";
-            this.lblArticulos.Click += new System.EventHandler(this.lblArticulos_Click);
             // 
             // lsbMarcas
             // 

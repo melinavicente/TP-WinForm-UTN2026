@@ -75,7 +75,6 @@
             this.lblAgregarCodigo.Size = new System.Drawing.Size(43, 13);
             this.lblAgregarCodigo.TabIndex = 2;
             this.lblAgregarCodigo.Text = "Codigo:";
-            this.lblAgregarCodigo.Click += new System.EventHandler(this.lblAgregarCodigo_Click);
             // 
             // lblAgregarDescripcion
             // 
@@ -116,7 +115,6 @@
             this.lblAgregarPrecio.Size = new System.Drawing.Size(49, 13);
             this.lblAgregarPrecio.TabIndex = 6;
             this.lblAgregarPrecio.Text = "Precio: $";
-            this.lblAgregarPrecio.Click += new System.EventHandler(this.lblAgregarPrecio_Click);
             // 
             // lblAgregarURL
             // 
@@ -183,7 +181,6 @@
             this.txtbAgregarURL.Name = "txtbAgregarURL";
             this.txtbAgregarURL.Size = new System.Drawing.Size(76, 20);
             this.txtbAgregarURL.TabIndex = 13;
-            this.txtbAgregarURL.TextChanged += new System.EventHandler(this.txtbAgregarURL_TextChanged);
             // 
             // btnAgregarAceptar
             // 

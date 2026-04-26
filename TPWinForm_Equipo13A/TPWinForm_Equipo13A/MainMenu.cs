@@ -77,7 +77,6 @@ namespace TPWinForm_Equipo13A
             List<Articulo> listaFiltrada;
 
 
-            //Esto es la forma resumida de lo que habia hecho con LINQ ->>>>
             if (criterio == "Nombre")
             {
                 listaFiltrada = listaArticulosOriginal.Where(x => x.Nombre.ToUpper().Contains(filtro)).ToList();
@@ -110,15 +109,6 @@ namespace TPWinForm_Equipo13A
             formArticulo.ShowDialog();
 
         }
-
-        //Tire todos los vacios para abajo de todo
-        private void criterioBusqueda_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void dgvArticulos_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
-
-        private void Ingrese_Click(object sender, EventArgs e) { }
-
-        private void textBox_usuario_TextChanged(object sender, EventArgs e) { }
 
         private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {

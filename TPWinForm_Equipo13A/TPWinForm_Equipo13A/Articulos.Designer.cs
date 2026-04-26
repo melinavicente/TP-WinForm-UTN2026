@@ -104,9 +104,7 @@
             this.grpbDetalleProducto.Size = new System.Drawing.Size(330, 260);
             this.grpbDetalleProducto.TabIndex = 3;
             this.grpbDetalleProducto.TabStop = false;
-            this.grpbDetalleProducto.Text = "DETALLE";
-            this.grpbDetalleProducto.Enter += new System.EventHandler(this.grpbDetalleProducto_Enter);
-            // 
+            this.grpbDetalleProducto.Text = "DETALLE";            // 
             // lblItemDescripcion
             // 
             this.lblItemDescripcion.AutoSize = true;

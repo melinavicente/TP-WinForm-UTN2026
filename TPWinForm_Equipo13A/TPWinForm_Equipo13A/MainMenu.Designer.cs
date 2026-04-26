@@ -58,7 +58,6 @@
             this.textBox_usuario.Name = "textBox_usuario";
             this.textBox_usuario.Size = new System.Drawing.Size(153, 20);
             this.textBox_usuario.TabIndex = 1;
-            this.textBox_usuario.TextChanged += new System.EventHandler(this.textBox_usuario_TextChanged);
             // 
             // Text_info
             // 
@@ -68,7 +67,6 @@
             this.Text_info.Size = new System.Drawing.Size(189, 13);
             this.Text_info.TabIndex = 2;
             this.Text_info.Text = "Ingrese el nombre del articulo a buscar";
-            this.Text_info.Click += new System.EventHandler(this.Ingrese_Click);
             // 
             // criterioBusqueda
             // 
@@ -77,7 +75,6 @@
             this.criterioBusqueda.Name = "criterioBusqueda";
             this.criterioBusqueda.Size = new System.Drawing.Size(121, 21);
             this.criterioBusqueda.TabIndex = 3;
-            this.criterioBusqueda.SelectedIndexChanged += new System.EventHandler(this.criterioBusqueda_SelectedIndexChanged);
             // 
             // btn_buscar
             // 
@@ -98,7 +95,6 @@
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.Size = new System.Drawing.Size(547, 229);
             this.dgvArticulos.TabIndex = 5;
-            this.dgvArticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellContentClick);
             // 
             // btnMarcas
             // 
