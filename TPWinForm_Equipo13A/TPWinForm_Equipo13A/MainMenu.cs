@@ -60,6 +60,11 @@ namespace TPWinForm_Equipo13A
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox_usuario.Text))
+            {
+                MessageBox.Show("Tenes que ingresar un texto para buscar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             if (listaArticulosOriginal == null || listaArticulosOriginal.Count == 0)
             {
                 MessageBox.Show("No hay datos cargados para buscar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
