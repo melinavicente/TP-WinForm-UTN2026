@@ -12,7 +12,7 @@ namespace Negocio
             AccesoDatos Datos = new AccesoDatos();
             try
             {
-                Datos.setearConsulta("SELECT Id, Descripcion FROM MARCAS");
+                Datos.setearConsulta("SELECT MIN(Id) Id, Descripcion FROM MARCAS GROUP BY Descripcion");
                 Datos.ejecutarLectura();
                 while (Datos.Lector.Read())
                 {
@@ -83,7 +83,7 @@ namespace Negocio
             {
                 datos.setearConsulta("UPDATE MARCAS SET Descripcion = @Descripcion WHERE Id = @Id");
                 datos.setearParametro("@Descripcion", marca.Descripcion);
-                datos.setearParametro("@id", marca.Id);
+                datos.setearParametro("@Id", marca.Id);
 
                 datos.ejecutarAccion();
             }

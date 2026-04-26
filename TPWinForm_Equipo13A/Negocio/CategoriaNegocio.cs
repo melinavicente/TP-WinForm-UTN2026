@@ -17,7 +17,7 @@ namespace Negocio
 
             try
             {
-                Datos.setearConsulta("Select Id, Descripcion from CATEGORIAS");
+                Datos.setearConsulta("SELECT MIN(Id) Id, Descripcion FROM CATEGORIAS GROUP BY Descripcion");
                 Datos.ejecutarLectura();
 
                 while (Datos.Lector.Read())
@@ -29,13 +29,16 @@ namespace Negocio
                     lista.Add(aux);
                 }
 
-                Datos.CerrarConexion();
                 return lista;
             }
             catch (Exception ex)
             {
                 throw ex;
 
+            }
+            finally
+            {
+                Datos.CerrarConexion();
             }
         }
         public void agregar(Categoria categoria)
@@ -87,7 +90,7 @@ namespace Negocio
             {
                 datos.setearConsulta("UPDATE CATEGORIAS SET Descripcion = @Descripcion WHERE Id = @Id");
                 datos.setearParametro("@Descripcion", categoria.Descripcion);
-                datos.setearParametro("@id", categoria.Id);
+                datos.setearParametro("@Id", categoria.Id);
 
                 datos.ejecutarAccion();
             }

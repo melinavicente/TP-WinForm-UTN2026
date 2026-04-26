@@ -109,7 +109,7 @@ namespace TPWinForm_Equipo13A
 
             private void btnEliminar_Click(object sender, EventArgs e)
             {
-                if (lsbCategorias.SelectedItems == null)
+                if (lsbCategorias.SelectedItem == null)
                 {
                     MessageBox.Show("Seleccione una categoria.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

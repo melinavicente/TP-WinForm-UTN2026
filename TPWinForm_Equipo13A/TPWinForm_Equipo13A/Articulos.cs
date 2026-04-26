@@ -165,6 +165,8 @@ namespace TPWinForm_Equipo13A
         {
             AgregarArticulo art = new AgregarArticulo();
             art.ShowDialog();
+
+            actualizarListado(negocio);
         }
 
         private void Articulos_FormClosed(object sender, FormClosedEventArgs e)

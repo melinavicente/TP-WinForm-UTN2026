@@ -104,7 +104,7 @@ namespace TPWinForm_Equipo13A
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lsbMarcas.SelectedItems == null)
+            if (lsbMarcas.SelectedItem == null)
             {
                 MessageBox.Show("Seleccione una marca.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

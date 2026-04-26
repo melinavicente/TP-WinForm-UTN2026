@@ -134,5 +134,10 @@ namespace TPWinForm_Equipo13A
             this.Hide(); 
             categorias.ShowDialog(); 
         }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            cargar();
+        }
     }
 }

@@ -57,15 +57,25 @@ namespace TPWinForm_Equipo13A
 
                 ArticuloNegocio negocio = new ArticuloNegocio();
 
-                if(articulo.Id !=0)
+
+                if (articulo.Id !=0)
                 {
-                negocio.modificar(articulo);
-                MessageBox.Show("Modificado agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    negocio.modificar(articulo);
+                    MessageBox.Show("Modificado agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                negocio.agregar(articulo);
-                MessageBox.Show("Articulo agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    articulo.Id = negocio.agregar(articulo);
+                    Imagen nuevaImagen = new Imagen();
+
+                    string AgregarURL = txtbAgregarURL.Text;
+
+                    nuevaImagen.URL = AgregarURL;
+                    nuevaImagen.IdArticulo = articulo.Id;
+                    nuevaImagen.Id = negocio.agregarImagen(nuevaImagen);
+                    articulo.Imagenes.Add(nuevaImagen);
+
+                    MessageBox.Show("Articulo agregado correctamente", "Yupiii", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 this.Close();
@@ -101,6 +111,7 @@ namespace TPWinForm_Equipo13A
                 cmbAgregarCategoria.SelectedValue = articulo.Categoria.Id;
                 cmbAgregarMarca.SelectedValue = articulo.Marca.Id;
                 txtbAgregarPrecio.Text = articulo.Precio.ToString();
+
             }
         }
         private void btnAgregarCancelar_Click(object sender, EventArgs e)

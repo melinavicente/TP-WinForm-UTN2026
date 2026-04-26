@@ -102,14 +102,14 @@ namespace Negocio
             }
         }
 
-        public void agregar(Articulo articulo)
+        public int agregar(Articulo articulo)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
                 datos.setearConsulta(
                     "INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) " +
-                    "VALUES (@codigo, @nombre, @descripcion, @idMarca, @idCategoria, @precio)"
+                    "OUTPUT INSERTED.Id VALUES (@codigo, @nombre, @descripcion, @idMarca, @idCategoria, @precio)"
                 );
                 datos.setearParametro("@codigo", articulo.Codigo);
                 datos.setearParametro("@nombre", articulo.Nombre);
@@ -117,7 +117,11 @@ namespace Negocio
                 datos.setearParametro("@idMarca", articulo.Marca.Id);
                 datos.setearParametro("@idCategoria", articulo.Categoria.Id);
                 datos.setearParametro("@precio", articulo.Precio);
-                datos.ejecutarAccion();
+
+                int id = (int)datos.ejecutarScalar();
+
+                return id;
+
             }
             catch (Exception ex)
             {
